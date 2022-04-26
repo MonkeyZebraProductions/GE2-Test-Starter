@@ -8,30 +8,33 @@ public class Nematode : MonoBehaviour
 
     public Material material;
 
-    public transform StartPos;
     private Vector3 SphereScale=Vector3.one;
 
     void Awake()
     {
         // Put your code here!
 
-        for(int i=0;i<=Random.Range(1,length), i++)
+        float privLenghth = Random.Range(1, length);
+        for (int i=0;i< privLenghth; i++)
         {
-            GameObject sphere= GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            sphere.transform.SetPatent(transform.this)
-            sphere.transform.position = StartPos.position + new Vector3(i, 0, 0);
-            sphere.renderer.material.color = Color.HSVtoRGB(i, 1, 1);
+            float colour = (1f / privLenghth) * i;
 
-            if(i <= Math Mathf.Ceil(length / 2))
-            { 
-               SphereScale+= new Vector3(1, 0, 0)
+            GameObject sphere= GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            MeshRenderer meshRenderer = sphere.GetComponent<MeshRenderer>();
+            sphere.transform.position = new Vector3(0f, 0f, i);
+            meshRenderer.material.color = Color.HSVToRGB(colour, 1, 1);
+
+            if (i <= Mathf.Ceil(privLenghth / 2))
+            {
+                SphereScale += new Vector3(0.1f, 0, 0);
             }
             else
             {
-                SphereScale -= new Vector3(1, 0, 0)
+                SphereScale -= new Vector3(0.1f, 0, 0);
             }
-            sphere.transform.scale = SphereScale;
-         }
+            sphere.transform.localScale = SphereScale;
+            sphere.transform.SetParent(transform);
+        }
     }
 
 

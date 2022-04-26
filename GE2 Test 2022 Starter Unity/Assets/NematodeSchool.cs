@@ -11,10 +11,15 @@ public class NematodeSchool : MonoBehaviour
     
     public int count = 10;
 
+    public float minY, maxY;
     // Start is called before the first frame update
     void Awake()
     {
-        // Put your code here
+        for(int i=0; i <=count; i++)
+        {
+            Vector3 randompos = Random.insideUnitSphere * radius+new Vector3(1,1,1);
+            Instantiate(prefab, randompos, Quaternion.Euler(0, Random.Range(minY, maxY), 0));
+        }
     }
 
     // Update is called once per frame
