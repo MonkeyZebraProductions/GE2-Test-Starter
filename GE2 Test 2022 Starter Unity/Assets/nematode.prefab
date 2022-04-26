@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1800818027794948306}
   - component: {fileID: 2366405547125382000}
   - component: {fileID: 6498113759376649446}
+  - component: {fileID: 3978620837206833499}
   m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
@@ -91,7 +92,7 @@ MonoBehaviour:
   weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  frequency: 0.1
+  frequency: 3.2
   radius: 10
   theta: 0
   amplitude: 80
@@ -112,7 +113,7 @@ MonoBehaviour:
   weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  scale: 4
+  scale: 5.29
   forwardFeelerDepth: 7
   sideFeelerDepth: 7
   frontFeelerUpdatesPerSecond: 20
@@ -122,6 +123,23 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3978620837206833499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759132165242080966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc4553c172a78f41813aa0a68df08b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  radius: 20
+  center: {x: 0, y: 0, z: 0}
 --- !u!1 &5606769397304328264
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class NematodeSchool : MonoBehaviour
     {
         for(int i=0; i <=count; i++)
         {
-            Vector3 randompos = Random.insideUnitSphere * radius+new Vector3(1,1,1);
+            Vector3 randompos = new Vector3(Random.insideUnitSphere.x * radius, transform.position.y, Random.insideUnitSphere.z * radius);
             Instantiate(prefab, randompos, Quaternion.Euler(0, Random.Range(minY, maxY), 0));
         }
     }
