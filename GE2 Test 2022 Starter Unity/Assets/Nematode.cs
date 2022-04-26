@@ -23,7 +23,6 @@ public class Nematode : MonoBehaviour
             MeshRenderer meshRenderer = sphere.GetComponent<MeshRenderer>();
             sphere.transform.position = new Vector3(0f, 0f, i);
             meshRenderer.material.color = Color.HSVToRGB(colour, 1, 1);
-
             if (i <= Mathf.Ceil(privLenghth / 2))
             {
                 SphereScale += new Vector3(0.1f, 0, 0);

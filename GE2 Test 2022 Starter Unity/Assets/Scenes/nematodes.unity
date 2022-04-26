@@ -551,6 +551,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1800818027794948306, guid: 4e82c9a85746ea4428df90e6ffa76fc5, type: 3}
+      propertyPath: weight
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366405547125382000, guid: 4e82c9a85746ea4428df90e6ffa76fc5, type: 3}
+      propertyPath: weight
+      value: 1.67
+      objectReference: {fileID: 0}
     - target: {fileID: 3978620837206833499, guid: 4e82c9a85746ea4428df90e6ffa76fc5, type: 3}
       propertyPath: radius
       value: 20.85
